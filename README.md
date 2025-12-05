@@ -1,80 +1,58 @@
-# Credit Card Fraud Detection — Machine Learning Project
+# Loan Default Risk Analysis — Exploratory Data Analysis Project
 ## Problem
 
-Financial institutions face increasing losses due to fraudulent credit card transactions.
-The challenge becomes more complex when working with:
+Financial institutions face significant losses when borrowers fail to repay loans.
+To improve lending decisions, it is critical to understand:
 
-* A highly imbalanced dataset (fraud cases < 1%)
+* Which financial, demographic, and credit-related factors influence loan default
 
-* Over 6 million real transaction records
+* How risk varies across customer segments
 
-* The need for fast, scalable, and accurate fraud detection
+* What patterns indicate potential default behaviour
 
-The objective was to develop a robust machine learning system that can accurately identify fraudulent transactions with minimal false positives.
+The objective was to analyze applicant data to uncover meaningful trends that support better credit assessment and risk management.
 
 ## Solution
 
-An end-to-end fraud detection pipeline was developed using advanced data processing and machine learning techniques:
+A detailed Exploratory Data Analysis (EDA) was performed to identify drivers of loan default:
 
-1. Exploratory Data Analysis (EDA)
+1. Data Exploration
 
-* Identified transaction patterns, anomalies, and fraud correlations
+* Examined applicant income, loan amount, credit history, employment, and demographic attributes
 
-* Handled missing values, outliers, and time-based trends
+* Studied distribution, outliers, and missing values
 
-* Visualized fraud vs. non-fraud distribution across key features
+* Compared characteristics of default vs. non-default customers
 
-2. Class Imbalance Handling
+2. Visual Pattern Detection
 
-* Applied SMOTE (Synthetic Minority Oversampling Technique)
+* Created correlation heatmaps to identify key relationships
 
-* Balanced the dataset to improve model learning
+* Used bar plots, box plots, and trend charts for risk segmentation
 
-* Compared undersampling & oversampling strategies
+* Analyzed how credit history, income stability, debt levels, and past defaults impact risk
 
-3. Machine Learning Models
+3. Risk Segmentation
 
-* Multiple models were tested, including:
+* Grouped customers into low, medium, and high-risk categories
 
-          * Logistic Regression
+* Identified factors strongly associated with default clusters
 
-          * Random Forest
-
-          * XGBoost (best performing)
-
-* A full ML workflow was implemented:
-
-          * Feature scaling
-
-          * Train-test split
-
-          * Hyperparameter tuning
-
-          * Cross-validation
-
-4. Evaluation
-
-Models were evaluated using fraud-sensitive metrics:
-
-* ROC-AUC
-
-* Precision, Recall, F1-score
-
-* Confusion Matrix
+* Highlighted attributes that should be prioritized during loan approval
 
 ## Outcome
 
-The project resulted in:
+The analysis delivered:
 
-* ~99% ROC-AUC score using XGBoost, outperforming baseline models
+* Clear insights into major default predictors, such as credit history, debt burden, loan amount, and income stability
 
-* Highly precise fraud detection with minimal false alarms
+* A decision-support framework to assist lenders in evaluating borrower risk
 
-* A scalable pipeline suitable for real-time deployment
+* Visual summaries that help stakeholders understand default behaviour patterns
 
-* Actionable insights for improving fraud monitoring systems
+* Actionable recommendations to reduce risk exposure and strengthen credit assessment workflows
 
-This solution significantly strengthens fraud prevention strategies and helps reduce financial losses.
+This empowers financial institutions to make more informed lending decisions and minimize default losses.
 
 # Tools & Technologies
 
@@ -82,12 +60,8 @@ This solution significantly strengthens fraud prevention strategies and helps re
 
 * Pandas, NumPy
 
-* Scikit-learn
-
-* XGBoost
-
-* SMOTE (Imbalanced-learn)
-
 * Matplotlib, Seaborn
 
-* End-to-end ML Pipeline
+* Exploratory Data Analysis (EDA)
+
+* Correlation & Trend Analysis
