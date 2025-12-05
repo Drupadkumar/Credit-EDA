@@ -1,18 +1,93 @@
-# Credit-EDA
-**Problem Statement:**  
-The company faces significant challenges in extending loans to customers with insufficient or no credit history, which increases the risk of defaults. The key risks are:  
+# Credit Card Fraud Detection — Machine Learning Project
+## Problem
 
-1. **Business Loss:** Rejecting creditworthy applicants results in missed opportunities.  
-2. **Financial Loss:** Approving loans for high-risk applicants who default leads to financial setbacks.  
+Financial institutions face increasing losses due to fraudulent credit card transactions.
+The challenge becomes more complex when working with:
 
-The goal is to identify patterns in loan applications to assess the likelihood of customer default. This will enable the company to make informed decisions on loan approvals, minimizing risks and ensuring loans are granted only to suitable applicants, thereby safeguarding the business from potential losses.  
+* A highly imbalanced dataset (fraud cases < 1%)
 
-**Business Objectives:**  
-The primary objective is to use Exploratory Data Analysis (EDA) to uncover patterns in consumer and loan data that predict the likelihood of loan default. This analysis will guide the company in:  
+* Over 6 million real transaction records
 
-- Denying loans to applicants identified as high risk.  
-- Offering reduced loan amounts to customers with elevated risk.  
-- Charging higher interest rates to applicants more likely to default.  
-- Ensuring creditworthy applicants are not unjustly denied loans.  
+* The need for fast, scalable, and accurate fraud detection
 
-By identifying the factors influencing loan default, the company can enhance its risk assessment processes, improve its loan portfolio quality, and make more effective financial decisions.
+The objective was to develop a robust machine learning system that can accurately identify fraudulent transactions with minimal false positives.
+
+## Solution
+
+An end-to-end fraud detection pipeline was developed using advanced data processing and machine learning techniques:
+
+1. Exploratory Data Analysis (EDA)
+
+* Identified transaction patterns, anomalies, and fraud correlations
+
+* Handled missing values, outliers, and time-based trends
+
+* Visualized fraud vs. non-fraud distribution across key features
+
+2. Class Imbalance Handling
+
+* Applied SMOTE (Synthetic Minority Oversampling Technique)
+
+* Balanced the dataset to improve model learning
+
+* Compared undersampling & oversampling strategies
+
+3. Machine Learning Models
+
+* Multiple models were tested, including:
+
+          * Logistic Regression
+
+          * Random Forest
+
+          * XGBoost (best performing)
+
+* A full ML workflow was implemented:
+
+          * Feature scaling
+
+          * Train-test split
+
+          * Hyperparameter tuning
+
+          * Cross-validation
+
+4. Evaluation
+
+Models were evaluated using fraud-sensitive metrics:
+
+* ROC-AUC
+
+* Precision, Recall, F1-score
+
+* Confusion Matrix
+
+## Outcome
+
+The project resulted in:
+
+* ~99% ROC-AUC score using XGBoost, outperforming baseline models
+
+* Highly precise fraud detection with minimal false alarms
+
+* A scalable pipeline suitable for real-time deployment
+
+* Actionable insights for improving fraud monitoring systems
+
+This solution significantly strengthens fraud prevention strategies and helps reduce financial losses.
+
+# Tools & Technologies
+
+* Python
+
+* Pandas, NumPy
+
+* Scikit-learn
+
+* XGBoost
+
+* SMOTE (Imbalanced-learn)
+
+* Matplotlib, Seaborn
+
+* End-to-end ML Pipeline
